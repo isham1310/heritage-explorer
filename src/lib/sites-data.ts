@@ -133,4 +133,47 @@ export const heritageSites: HeritageSite[] = [
       },
     ],
   },
+  {
+    id: "harishchandragad-fort",
+    name: "Harishchandragad Fort",
+    location: "Ahmednagar District, Maharashtra, India",
+    culture: "Maratha",
+    heroImageId: "harishchandragad-hero",
+    description: "Harishchandragad is a hill fort in the Ahmednagar district of India. Its history is linked with that of Malshej Ghat, Kothale village and it has played a role in guarding and controlling the surrounding region.",
+    historicalContext: "The fort is quite ancient, with its origin in the 6th century during the rule of the Kalachuri dynasty. The various Puranas like Matsyapurana, Agnipurana and Skandapurana include many references about Harishchandragad. Great sage Changdev used to meditate here in the 14th century. The fort was under the control of Moguls, and the Marathas captured it in 1747.",
+    architecturalSignificance: "The fort features diverse cultural constructions. The carvings on the temples of Nageshwar, Harishchandreshwar, and the Kedareshwar cave indicate medieval architectural styles. The Temple of Harishchandreshwar is a marvelous example of ancient Indian stone carving art.",
+    notableEvents: [
+      "Origin in the 6th century under the Kalachuri dynasty.",
+      "Meditation place for the great sage Changdev in the 14th century.",
+      "Captured by the Marathas in 1747."
+    ],
+    notableFigures: ["Changdev"],
+    youtubeVideoLinks: [
+      "https://www.youtube.com/watch?v=f2a9v2gVj1E",
+      "https://www.youtube.com/watch?v=0h_Bbe9aM4c",
+      "https://www.youtube.com/watch?v=mflZzQ7L3aQ"
+    ],
+    waypoints: [
+      {
+        title: "Kedareshwar Cave",
+        description: "A huge cave containing a big Shiva Linga completely surrounded by ice-cold water. There are four pillars around the Linga, and local legend holds that when the fourth pillar breaks, the world will end.",
+        imageId: "harishchandragad-waypoint-1"
+      },
+      {
+        title: "Kokan Kada (Konkan Cliff)",
+        description: "A west-facing cliff that looks down upon the Konkan region. It offers stunning views and sometimes a circular rainbow (Brocken spectre) can be seen. The phenomenon of vertical cloud burst is also observable here.",
+        imageId: "harishchandragad-waypoint-2"
+      },
+      {
+        title: "Taramati Peak",
+        description: "The topmost point on the fort at 1429 meters. It offers a panoramic glimpse of the Naneghat range and other forts in the Kasara region.",
+        imageId: "harishchandragad-waypoint-3"
+      },
+      {
+        title: "Temple of Harishchandreshwar",
+        description: "A marvelous example of stone carving, this temple is about 16m high. The river Mangal Ganga is said to originate from a tank near the temple.",
+        imageId: "harishchandragad-waypoint-4"
+      }
+    ]
+  }
 ];

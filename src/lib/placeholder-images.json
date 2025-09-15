@@ -72,6 +72,36 @@
       "description": "A bird's eye view of the entire temple complex.",
       "imageUrl": "https://picsum.photos/seed/604/600/400",
       "imageHint": "temple complex"
+    },
+    {
+      "id": "harishchandragad-hero",
+      "description": "A panoramic view of Harishchandragad.",
+      "imageUrl": "https://picsum.photos/seed/701/1200/600",
+      "imageHint": "mountain fort"
+    },
+    {
+      "id": "harishchandragad-waypoint-1",
+      "description": "Kedareshwar Cave with its Shiva Linga surrounded by water.",
+      "imageUrl": "https://picsum.photos/seed/702/600/400",
+      "imageHint": "cave temple"
+    },
+    {
+      "id": "harishchandragad-waypoint-2",
+      "description": "The breathtaking view from Kokan Kada cliff.",
+      "imageUrl": "https://picsum.photos/seed/703/600/400",
+      "imageHint": "cliff view"
+    },
+    {
+      "id": "harishchandragad-waypoint-3",
+      "description": "View from the Taramati Peak, the highest point of the fort.",
+      "imageUrl": "https://picsum.photos/seed/704/600/400",
+      "imageHint": "mountain peak"
+    },
+    {
+      "id": "harishchandragad-waypoint-4",
+      "description": "The ancient Temple of Harishchandreshwar.",
+      "imageUrl": "https://picsum.photos/seed/705/600/400",
+      "imageHint": "ancient temple"
     }
   ]
 }
