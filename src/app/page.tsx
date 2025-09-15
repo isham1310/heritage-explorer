@@ -9,25 +9,28 @@ import { Search } from "lucide-react";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredSites, setFilteredSites] =
-    useState<HeritageSite[]>(heritageSites);
+  const [filteredSites, setFilteredSites] = useState<HeritageSite[]>([]);
 
   useEffect(() => {
-    const results = heritageSites.filter((site) =>
-      site.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredSites(results);
+    if (searchTerm.trim() !== "") {
+      const results = heritageSites.filter((site) =>
+        site.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredSites(results);
+    } else {
+      setFilteredSites([]);
+    }
   }, [searchTerm]);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
-          Explore Maharashtra's Heritage
+          Welcome to Your Heritage Guide
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Search for a site or select one to begin your journey and uncover the
-          stories woven into history.
+          I can tell you the stories of Maharashtra's most famous heritage
+          sites. What would you like to explore today?
         </p>
       </div>
 
@@ -35,23 +38,31 @@ export default function Home() {
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         <Input
           type="text"
-          placeholder="Search for a heritage site..."
+          placeholder="Search for a fort or temple..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full text-lg p-6 pl-12 rounded-full"
         />
       </div>
 
-      {filteredSites.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredSites.map((site) => (
-            <SiteCard key={site.id} site={site} />
-          ))}
-        </div>
+      {searchTerm.trim() !== "" ? (
+        filteredSites.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSites.map((site) => (
+              <SiteCard key={site.id} site={site} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <p className="text-xl text-muted-foreground">
+              I couldn't find any sites matching your search. Try another name.
+            </p>
+          </div>
+        )
       ) : (
         <div className="text-center py-16">
           <p className="text-xl text-muted-foreground">
-            No sites found matching your search.
+            Start by typing a name above to find a heritage site.
           </p>
         </div>
       )}
