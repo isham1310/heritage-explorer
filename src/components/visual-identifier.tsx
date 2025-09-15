@@ -22,14 +22,20 @@ export function VisualIdentifier() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const stopCamera = useCallback(() => {
+    if (videoRef.current && videoRef.current.srcObject) {
+      (videoRef.current.srcObject as MediaStream).getTracks().forEach(track => track.stop());
+      videoRef.current.srcObject = null;
+    }
+  },[]);
+
+
   useEffect(() => {
     return () => {
       // Stop camera stream when component unmounts
-      if (videoRef.current && videoRef.current.srcObject) {
-        (videoRef.current.srcObject as MediaStream).getTracks().forEach(track => track.stop());
-      }
+      stopCamera();
     };
-  }, []);
+  }, [stopCamera]);
 
   const getCameraPermission = async () => {
     if (typeof navigator.mediaDevices === 'undefined' || !navigator.mediaDevices.getUserMedia) {
@@ -102,11 +108,9 @@ export function VisualIdentifier() {
         setResult(null);
       }
       setIsCameraOpen(false);
-      if (video.srcObject) {
-        (video.srcObject as MediaStream).getTracks().forEach(track => track.stop());
-      }
+      stopCamera();
     }
-  }, []);
+  }, [stopCamera]);
 
   const clearImage = () => {
     setImage(null);
@@ -115,6 +119,11 @@ export function VisualIdentifier() {
       fileInputRef.current.value = "";
     }
   };
+
+  const handleCancelCamera = () => {
+    setIsCameraOpen(false);
+    stopCamera();
+  }
 
   return (
     <Card>
@@ -137,7 +146,7 @@ export function VisualIdentifier() {
               <Button onClick={takePicture} disabled={hasCameraPermission === false}>
                 <Camera className="mr-2" /> Take Picture
               </Button>
-              <Button variant="outline" onClick={() => setIsCameraOpen(false)}>Cancel</Button>
+              <Button variant="outline" onClick={handleCancelCamera}>Cancel</Button>
             </div>
           </div>
         ) : image ? (
