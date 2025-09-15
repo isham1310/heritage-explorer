@@ -2,138 +2,134 @@ import type { HeritageSite } from "@/types";
 
 export const heritageSites: HeritageSite[] = [
   {
-    id: "colosseum",
-    name: "The Colosseum",
-    location: "Rome, Italy",
-    culture: "Roman",
-    heroImageId: "colosseum-hero",
+    id: "raigad-fort",
+    name: "Raigad Fort",
+    location: "Raigad District, Maharashtra, India",
+    culture: "Maratha",
+    heroImageId: "raigad-fort-hero",
     description:
-      "An oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age.",
+      "A majestic hill fort that served as the capital of the Maratha Empire under Chhatrapati Shivaji Maharaj. Perched atop a wedge-shaped block of rock in the Sahyadri mountain range, it stands as a testament to Maratha valor and architectural ingenuity.",
     historicalContext:
-      "Built of travertine limestone, tuff, and brick-faced concrete, it was the largest amphitheatre of the Roman Empire. Construction began under the emperor Vespasian in AD 72 and was completed in AD 80 under his successor and heir, Titus.",
+      "Raigad was chosen by Shivaji Maharaj as his capital in 1674 when he was crowned King of the Maratha Empire. The fort witnessed many significant historical events and remained the capital of the Marathas for many years.",
     architecturalSignificance:
-      "The Colosseum could hold an estimated 50,000 to 80,000 spectators at various points in its history, having an average audience of some 65,000; it was used for gladiatorial contests and public spectacles such as mock sea battles, animal hunts, executions, re-enactments of famous battles, and dramas based on Roman mythology.",
+      "The fort's construction is a marvel of military engineering, with its strategic location and formidable defenses. It includes grand gates, a marketplace, residential quarters, temples, and a darbar (court). The fort was designed to be self-sufficient with water reservoirs and granaries.",
     notableEvents: [
-      "Inaugural games in AD 80, which lasted for 100 days.",
-      "Martyrdom of early Christians, according to church tradition.",
-      "Last recorded gladiatorial fights in 435.",
+      "Coronation of Chhatrapati Shivaji Maharaj in 1674.",
+      "The fort served as the seat of the Maratha government.",
+      "Capture by the British East India Company in 1818 after a prolonged siege.",
     ],
-    notableFigures: ["Emperor Vespasian", "Emperor Titus", "Commodus"],
+    notableFigures: ["Chhatrapati Shivaji Maharaj", "Jijabai Shahaji Bhosale"],
     youtubeVideoLinks: [
-      "https://www.youtube.com/watch?v=dY_3ggKg0Bc",
-      "https://www.youtube.com/watch?v=a1_220I2-MA",
-      "https://www.youtube.com/watch?v=plDkpe_F6-8",
-      "https://www.youtube.com/watch?v=K5M5g-xT_YI",
-      "https://www.youtube.com/watch?v=sOcyCah7n-A"
+      "https://www.youtube.com/watch?v=Fj2gJ6-R8cI",
+      "https://www.youtube.com/watch?v=J4-y9yvMXiA",
+      "https://www.youtube.com/watch?v=e_8yI-MWf6M",
+      "https://www.youtube.com/watch?v=g_gicFsvvAQ"
     ],
     waypoints: [
       {
-        title: "The Exterior Facade",
+        title: "Maha Darwaja (Main Gate)",
         description:
-          "Marvel at the three-tiered arcade, adorned with columns of Doric, Ionic, and Corinthian orders. Imagine the 80 entrances that allowed tens of thousands of citizens to flood into the arena.",
-        imageId: "colosseum-waypoint-1",
+          "The main entrance to the fort is a massive, fortified gate, designed to be impregnable. Its strategic construction showcases the military genius of the Marathas.",
+        imageId: "raigad-fort-waypoint-1",
       },
       {
-        title: "The Arena Floor and Hypogeum",
+        title: "Raj Sabha (Royal Court)",
         description:
-          "Look down upon the arena floor, once covered in sand to soak up the blood of combatants. Below lies the Hypogeum, a complex network of tunnels and chambers where gladiators and animals were held before contests.",
-        imageId: "colosseum-waypoint-2",
+          "This is the spot where Chhatrapati Shivaji Maharaj's coronation took place. The throne replica faces the main entrance, and the acoustics of the area are remarkable.",
+        imageId: "raigad-fort-waypoint-2",
       },
       {
-        title: "The World of the Gladiator",
+        title: "Takmak Tok (Punishment Point)",
         description:
-          "Gladiators were the superstars of their day. They were slaves, criminals, or prisoners of war, trained in special schools to fight to the death for the entertainment of the masses. Their lives were brutal and often short, but a successful gladiator could win fame and fortune.",
-        imageId: "colosseum-waypoint-3",
+          "A cliff-edge viewpoint offering breathtaking views of the surrounding valley. It is said that this point was used for capital punishment during the Maratha rule.",
+        imageId: "raigad-fort-waypoint-3",
       },
     ],
   },
   {
-    id: "machu-picchu",
-    name: "Machu Picchu",
-    location: "Cusco Region, Peru",
-    culture: "Inca",
-    heroImageId: "machu-picchu-hero",
+    id: "siddhivinayak-temple",
+    name: "Siddhivinayak Temple",
+    location: "Mumbai, Maharashtra, India",
+    culture: "Indian",
+    heroImageId: "siddhivinayak-hero",
     description:
-      "A 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cusco.",
+      "One of the richest and most revered temples in Mumbai, dedicated to Lord Ganesha. The temple is visited by thousands of devotees every day, including famous personalities and politicians.",
     historicalContext:
-      "Most archaeologists believe that Machu Picchu was constructed as an estate for the Inca emperor Pachacuti (1438–1472). Often mistakenly referred to as the 'Lost City of the Incas', it is the most familiar icon of Inca civilization.",
+      "The temple was originally built by Laxman Vithu and Deubai Patil on November 19, 1801. It has since been renovated and transformed from a small shrine into the grand temple it is today.",
     architecturalSignificance:
-      "The Incas built the estate around 1450 but abandoned it a century later at the time of the Spanish conquest. The site's buildings use the classical Inca architectural style of polished dry-stone walls of regular shape. Its three primary structures are the Intihuatana, the Temple of the Sun, and the Room of the Three Windows.",
+      "The temple has a unique architectural style with a gold-plated dome and a central idol of Lord Ganesha that is carved out of a single black stone. The idol's trunk is tilted to the right, which is considered a rare form.",
     notableEvents: [
-      "Construction around 1450.",
-      "Abandonment around 1572.",
-      "Brought to international attention by Hiram Bingham in 1911.",
+      "Original construction in 1801.",
+      "Major reconstruction in the 1990s.",
+      "Visits by numerous celebrities and international figures.",
     ],
-    notableFigures: ["Pachacuti", "Hiram Bingham III"],
+    notableFigures: ["Lord Ganesha"],
     youtubeVideoLinks: [
-      "https://www.youtube.com/watch?v=cnMa-Sm9H4k",
-      "https://www.youtube.com/watch?v=Zk9g30Gz_x8",
-      "https://www.youtube.com/watch?v=P2Yy_56M_4s",
-      "https://www.youtube.com/watch?v=1dF8a2Y7dI0"
+      "https://www.youtube.com/watch?v=A8M9IFg2L8c",
+      "https://www.youtube.com/watch?v=T_CiBS2Al4Y",
+      "https://www.youtube.com/watch?v=J_jKjF0i42A"
     ],
     waypoints: [
       {
-        title: "The Intihuatana Stone",
+        title: "The Main Sanctum",
         description:
-          "This mysterious carved rock is believed to have been an astronomical clock or calendar by the Inca. Its name translates to 'Hitching Post of the Sun', and it aligns with the sun's position during the solstices.",
-        imageId: "machu-picchu-waypoint-1",
+          "The heart of the temple, where the idol of Lord Ganesha resides. Devotees queue for hours to get a glimpse of the deity and seek his blessings.",
+        imageId: "siddhivinayak-waypoint-1",
       },
       {
-        title: "Agricultural Terraces",
+        title: "The Temple Precincts",
         description:
-          "The steep mountainsides were tamed by the Inca with extensive terracing. These terraces were not only for growing crops like maize and potatoes but also helped prevent soil erosion and landslides.",
-        imageId: "machu-picchu-waypoint-2",
+          "The temple complex is always bustling with activity, with devotees offering prayers, flowers, and sweets. The atmosphere is filled with devotion and faith.",
+        imageId: "siddhivinayak-waypoint-2",
       },
       {
-        title: "Temple of the Sun",
+        title: "Architectural Details",
         description:
-          "This semi-circular temple is a masterpiece of stonework, built around a large granite rock. Its windows align perfectly with the rising sun during the summer and winter solstices, showcasing the Incas' advanced astronomical knowledge.",
-        imageId: "machu-picchu-waypoint-3",
+          "The temple's architecture is a blend of traditional and modern styles. The intricate carvings, the golden dome, and the marble floors add to its beauty.",
+        imageId: "siddhivinayak-waypoint-3",
       },
     ],
   },
   {
-    id: "petra",
-    name: "Petra",
-    location: "Ma'an Governorate, Jordan",
-    culture: "Nabataean",
-    heroImageId: "petra-hero",
+    id: "kailasa-temple-ellora",
+    name: "Kailasa Temple, Ellora",
+    location: "Aurangabad District, Maharashtra, India",
+    culture: "Indian",
+    heroImageId: "kailasa-temple-hero",
     description:
-      "A historic and archaeological city in southern Jordan. Petra is famous for its rock-cut architecture and water conduit system. Another name for Petra is the Rose City due to the color of the stone from which it is carved.",
+      "The largest monolithic rock-cut temple in the world, located in the Ellora Caves. A UNESCO World Heritage Site, it is a remarkable example of Dravidian architecture and a chariot-shaped monument dedicated to Lord Shiva.",
     historicalContext:
-      "Established possibly as early as 312 BC as the capital city of the Arab Nabataeans, it is a symbol of Jordan, as well as its most-visited tourist attraction. The Nabataeans were nomadic Arabs who benefited from the proximity of Petra to the incense trade routes by establishing it as a major regional trading hub.",
+      "The temple was commissioned by Rashtrakuta King Krishna I in the 8th century. It is believed to have taken over two decades to complete, involving the excavation of over 200,000 tons of rock.",
     architecturalSignificance:
-      "The city is famous for its architecture carved directly into the vibrant red, white, pink, and sandstone cliff faces. The most famous structure is Al-Khazneh (The Treasury), believed to be the mausoleum of Nabataean King Aretas IV.",
+      "Carved from a single rock, the temple is an architectural marvel. It features intricate sculptures of deities, mythological scenes, and life-sized elephants. The sheer scale and detail of the temple are awe-inspiring.",
     notableEvents: [
-      "Established as Nabataean capital.",
-      "Annexation by the Roman Empire in AD 106.",
-      "Rediscovered by Swiss explorer Johann Ludwig Burckhardt in 1812.",
+      "Construction in the 8th century under King Krishna I.",
+      "Designated a UNESCO World Heritage Site in 1983.",
     ],
-    notableFigures: ["King Aretas IV", "Johann Ludwig Burckhardt"],
+    notableFigures: ["King Krishna I", "Lord Shiva"],
     youtubeVideoLinks: [
-      "https://www.youtube.com/watch?v=l_gD923pS7c",
-      "https://www.youtube.com/watch?v=JyK4g67yC4E",
-      "https://www.youtube.com/watch?v=aZa_321aW2I",
-      "https://www.youtube.com/watch?v=xP-iA4GgVts"
+      "https://www.youtube.com/watch?v=jT8s2G-vQsI",
+      "https://www.youtube.com/watch?v=2c906p_x_3M",
+      "https://www.youtube.com/watch?v=WhjnmhCyS8a"
     ],
     waypoints: [
       {
-        title: "The Siq",
+        title: "Intricate Carvings",
         description:
-          "Your journey begins through the Siq, a narrow, winding canyon over a kilometer long. The towering cliffs on either side create a dramatic entrance, building anticipation for the city hidden within.",
-        imageId: "petra-waypoint-1",
+          "The walls of the temple are adorned with detailed carvings depicting stories from Hindu mythology, including scenes from the Ramayana and Mahabharata.",
+        imageId: "kailasa-temple-waypoint-1",
       },
       {
-        title: "The Treasury (Al-Khazneh)",
+        title: "Elephant Sculptures",
         description:
-          "As you exit the Siq, you are greeted by the breathtaking facade of the Treasury. This ornate, 40-meter-high structure, intricately carved with columns and figures, was not a treasury but likely a royal tomb.",
-        imageId: "petra-hero",
+          "A row of life-sized elephants is carved at the base of the temple, appearing to carry the entire structure on their backs, symbolizing their importance in Hindu culture.",
+        imageId: "kailasa-temple-waypoint-2",
       },
       {
-        title: "The Monastery (Ad-Deir)",
+        title: "The Main Shrine",
         description:
-          "After a hike up 800 steps, you'll reach the Monastery. Even larger than the Treasury, its remote location and commanding views make it one of Petra's most rewarding sights. It was likely used for religious gatherings.",
-        imageId: "petra-waypoint-2",
+          "The central shrine houses a massive Shiva Lingam. The temple's design, with its multiple levels and courtyards, creates a divine and spiritual ambiance.",
+        imageId: "kailasa-temple-waypoint-3",
       },
     ],
   },

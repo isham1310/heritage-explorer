@@ -2,76 +2,76 @@
 {
   "placeholderImages": [
     {
-      "id": "colosseum-hero",
-      "description": "The Colosseum in Rome under a blue sky.",
-      "imageUrl": "https://picsum.photos/seed/101/1200/600",
-      "imageHint": "ancient ruin"
+      "id": "raigad-fort-hero",
+      "description": "Panoramic view of Raigad Fort on a misty morning.",
+      "imageUrl": "https://picsum.photos/seed/401/1200/600",
+      "imageHint": "hill fort"
     },
     {
-      "id": "colosseum-waypoint-1",
-      "description": "The exterior arches of the Colosseum.",
-      "imageUrl": "https://picsum.photos/seed/102/600/400",
-      "imageHint": "architecture arch"
+      "id": "raigad-fort-waypoint-1",
+      "description": "The main entrance (Maha Darwaja) of Raigad Fort.",
+      "imageUrl": "https://picsum.photos/seed/402/600/400",
+      "imageHint": "fort gate"
     },
     {
-      "id": "colosseum-waypoint-2",
-      "description": "The interior arena of the Colosseum, showing the hypogeum.",
-      "imageUrl": "https://picsum.photos/seed/103/600/400",
-      "imageHint": "arena underground"
+      "id": "raigad-fort-waypoint-2",
+      "description": "The throne of Shivaji Maharaj at Raigad Fort.",
+      "imageUrl": "https://picsum.photos/seed/403/600/400",
+      "imageHint": "ancient throne"
     },
     {
-      "id": "colosseum-waypoint-3",
-      "description": "Gladiatorial helmet and weapons.",
-      "imageUrl": "https://picsum.photos/seed/104/600/400",
-      "imageHint": "gladiator helmet"
+      "id": "raigad-fort-waypoint-3",
+      "description": "Takmak Tok, a cliff point at Raigad Fort.",
+      "imageUrl": "https://picsum.photos/seed/404/600/400",
+      "imageHint": "cliff viewpoint"
     },
     {
-      "id": "machu-picchu-hero",
-      "description": "Panoramic view of Machu Picchu.",
-      "imageUrl": "https://picsum.photos/seed/201/1200/600",
-      "imageHint": "incan ruins"
+      "id": "siddhivinayak-hero",
+      "description": "The exterior of the Siddhivinayak Temple in Mumbai.",
+      "imageUrl": "https://picsum.photos/seed/501/1200/600",
+      "imageHint": "hindu temple"
     },
     {
-      "id": "machu-picchu-waypoint-1",
-      "description": "The Intihuatana stone at Machu Picchu.",
-      "imageUrl": "https://picsum.photos/seed/202/600/400",
-      "imageHint": "carved stone"
+      "id": "siddhivinayak-waypoint-1",
+      "description": "The main sanctum of the Siddhivinayak Temple.",
+      "imageUrl": "https://picsum.photos/seed/502/600/400",
+      "imageHint": "temple interior"
     },
     {
-      "id": "machu-picchu-waypoint-2",
-      "description": "Terraced fields at Machu Picchu.",
-      "imageUrl": "https://picsum.photos/seed/203/600/400",
-      "imageHint": "agricultural terraces"
+      "id": "siddhivinayak-waypoint-2",
+      "description": "Devotees outside the Siddhivinayak Temple.",
+      "imageUrl": "https://picsum.photos/seed/503/600/400",
+      "imageHint": "devotees crowd"
     },
     {
-      "id": "machu-picchu-waypoint-3",
-      "description": "The Temple of the Sun at Machu Picchu.",
-      "imageUrl": "https://picsum.photos/seed/204/600/400",
-      "imageHint": "stone temple"
+      "id": "siddhivinayak-waypoint-3",
+      "description": "Close-up of the temple's architecture.",
+      "imageUrl": "https://picsum.photos/seed/504/600/400",
+      "imageHint": "temple architecture"
     },
     {
-      "id": "petra-hero",
-      "description": "The Treasury facade carved into the rock at Petra.",
-      "imageUrl": "https://picsum.photos/seed/301/1200/600",
-      "imageHint": "ancient city"
+      "id": "kailasa-temple-hero",
+      "description": "The Kailasa Temple carved out of a single rock at Ellora.",
+      "imageUrl": "https://picsum.photos/seed/601/1200/600",
+      "imageHint": "rock-cut temple"
     },
     {
-      "id": "petra-waypoint-1",
-      "description": "The Siq, the narrow canyon entrance to Petra.",
-      "imageUrl": "https://picsum.photos/seed/302/600/400",
-      "imageHint": "canyon path"
+      "id": "kailasa-temple-waypoint-1",
+      "description": "Intricate carvings on the walls of the Kailasa Temple.",
+      "imageUrl": "https://picsum.photos/seed/602/600/400",
+      "imageHint": "stone carvings"
     },
     {
-      "id": "petra-waypoint-2",
-      "description": "The Monastery, Ad-Deir, at Petra.",
-      "imageUrl": "https://picsum.photos/seed/303/600/400",
-      "imageHint": "carved monastery"
+      "id": "kailasa-temple-waypoint-2",
+      "description": "Life-sized elephant sculptures at the base of the temple.",
+      "imageUrl": "https://picsum.photos/seed/603/600/400",
+      "imageHint": "elephant sculpture"
     },
     {
-      "id": "petra-waypoint-3",
-      "description": "Tombs carved into the rock face at Petra.",
-      "imageUrl": "https://picsum.photos/seed/304/600/400",
-      "imageHint": "ancient tombs"
+      "id": "kailasa-temple-waypoint-3",
+      "description": "A bird's eye view of the entire temple complex.",
+      "imageUrl": "https://picsum.photos/seed/604/600/400",
+      "imageHint": "temple complex"
     }
   ]
 }
