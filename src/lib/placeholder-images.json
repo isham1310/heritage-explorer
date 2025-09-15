@@ -1,3 +1,77 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "colosseum-hero",
+      "description": "The Colosseum in Rome under a blue sky.",
+      "imageUrl": "https://picsum.photos/seed/101/1200/600",
+      "imageHint": "ancient ruin"
+    },
+    {
+      "id": "colosseum-waypoint-1",
+      "description": "The exterior arches of the Colosseum.",
+      "imageUrl": "https://picsum.photos/seed/102/600/400",
+      "imageHint": "architecture arch"
+    },
+    {
+      "id": "colosseum-waypoint-2",
+      "description": "The interior arena of the Colosseum, showing the hypogeum.",
+      "imageUrl": "https://picsum.photos/seed/103/600/400",
+      "imageHint": "arena underground"
+    },
+    {
+      "id": "colosseum-waypoint-3",
+      "description": "Gladiatorial helmet and weapons.",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "gladiator helmet"
+    },
+    {
+      "id": "machu-picchu-hero",
+      "description": "Panoramic view of Machu Picchu.",
+      "imageUrl": "https://picsum.photos/seed/201/1200/600",
+      "imageHint": "incan ruins"
+    },
+    {
+      "id": "machu-picchu-waypoint-1",
+      "description": "The Intihuatana stone at Machu Picchu.",
+      "imageUrl": "https://picsum.photos/seed/202/600/400",
+      "imageHint": "carved stone"
+    },
+    {
+      "id": "machu-picchu-waypoint-2",
+      "description": "Terraced fields at Machu Picchu.",
+      "imageUrl": "https://picsum.photos/seed/203/600/400",
+      "imageHint": "agricultural terraces"
+    },
+    {
+      "id": "machu-picchu-waypoint-3",
+      "description": "The Temple of the Sun at Machu Picchu.",
+      "imageUrl": "https://picsum.photos/seed/204/600/400",
+      "imageHint": "stone temple"
+    },
+    {
+      "id": "petra-hero",
+      "description": "The Treasury facade carved into the rock at Petra.",
+      "imageUrl": "https://picsum.photos/seed/301/1200/600",
+      "imageHint": "ancient city"
+    },
+    {
+      "id": "petra-waypoint-1",
+      "description": "The Siq, the narrow canyon entrance to Petra.",
+      "imageUrl": "https://picsum.photos/seed/302/600/400",
+      "imageHint": "canyon path"
+    },
+    {
+      "id": "petra-waypoint-2",
+      "description": "The Monastery, Ad-Deir, at Petra.",
+      "imageUrl": "https://picsum.photos/seed/303/600/400",
+      "imageHint": "carved monastery"
+    },
+    {
+      "id": "petra-waypoint-3",
+      "description": "Tombs carved into the rock face at Petra.",
+      "imageUrl": "https://picsum.photos/seed/304/600/400",
+      "imageHint": "ancient tombs"
+    }
+  ]
 }

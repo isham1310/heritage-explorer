@@ -1,1 +1,5 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/curate-relevant-youtube-videos.ts';
+import '@/ai/flows/generate-site-narrative.ts';
