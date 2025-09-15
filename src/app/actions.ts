@@ -10,6 +10,11 @@ import {
   CurateRelevantYouTubeVideosInput,
   CurateRelevantYouTubeVideosOutput,
 } from "@/ai/flows/curate-relevant-youtube-videos";
+import {
+  identifyHeritageSiteFromImage,
+  IdentifyHeritageSiteFromImageInput,
+  IdentifyHeritageSiteFromImageOutput,
+} from "@/ai/flows/identify-heritage-site-from-image";
 
 export async function handleGenerateNarrative(
   input: GenerateSiteNarrativeInput
@@ -36,6 +41,21 @@ export async function handleCurateVideos(
     console.error("Error curating videos:", error);
     return {
       curatedVideoLinks: [],
+    };
+  }
+}
+
+export async function handleIdentifySite(
+  input: IdentifyHeritageSiteFromImageInput
+): Promise<IdentifyHeritageSiteFromImageOutput> {
+  try {
+    const result = await identifyHeritageSiteFromImage(input);
+    return result;
+  } catch (error) {
+    console.error("Error identifying site:", error);
+    return {
+      siteName: "Error",
+      description: "An error occurred while analyzing the image. Please try again.",
     };
   }
 }

@@ -8,7 +8,8 @@ import { WaypointGuide } from "@/components/waypoint-guide";
 import { VideoCurator } from "@/components/video-curator";
 import { FeedbackForm } from "@/components/feedback-form";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Camera, Film, Users } from "lucide-react";
+import { BookOpen, Camera, Film, Users, Eye } from "lucide-react";
+import { VisualIdentifier } from "@/components/visual-identifier";
 
 export async function generateStaticParams() {
   return heritageSites.map((site) => ({
@@ -104,6 +105,27 @@ export default function SitePage({ params }: { params: { id: string } }) {
 
           {/* Right/Sidebar Column */}
           <aside className="space-y-12">
+            {/* Visual Identifier */}
+            <section aria-labelledby="visual-identifier-title">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <Eye className="h-6 w-6 text-primary" />
+                </div>
+                <h2
+                  id="visual-identifier-title"
+                  className="text-2xl font-bold"
+                >
+                  Visual Identifier
+                </h2>
+              </div>
+              <p className="text-muted-foreground mb-6">
+                Have a photo of a landmark? Upload it or use your camera to let our AI identify it for you.
+              </p>
+              <VisualIdentifier />
+            </section>
+
+            <Separator />
+
             {/* Curated Videos */}
             <section aria-labelledby="videos-title">
               <div className="flex items-center gap-4 mb-6">
