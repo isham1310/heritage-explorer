@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { heritageSites } from "@/lib/sites-data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -8,7 +9,8 @@ import { WaypointGuide } from "@/components/waypoint-guide";
 import { VideoCurator } from "@/components/video-curator";
 import { FeedbackForm } from "@/components/feedback-form";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Camera, Film, Users } from "lucide-react";
+import { BookOpen, Camera, Film, Users, Ticket } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
   return heritageSites.map((site) => ({
@@ -55,6 +57,21 @@ export default function SitePage({ params }: { params: { id: string } }) {
 
       {/* Main Content */}
       <div className="container mx-auto py-12 px-4">
+        {site.id === "harishchandragad-fort" && (
+          <div className="mb-8 text-center">
+            <Button asChild size="lg">
+              <Link
+                href="http://isham1310.github.io/harischandragadtrek/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Ticket className="mr-2 h-5 w-5" />
+                Book a Trip
+              </Link>
+            </Button>
+            <Separator className="mt-8"/>
+          </div>
+        )}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left/Main Column */}
           <div className="lg:col-span-2 space-y-12">
