@@ -23,6 +23,7 @@ import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import { SpeechControls } from "./speech-controls";
 import { ScrollArea } from "./ui/scroll-area";
+import { Separator } from "./ui/separator";
 
 interface StoryGeneratorProps {
   site: HeritageSite;
@@ -127,15 +128,5 @@ export function StoryGenerator({ site }: StoryGeneratorProps) {
         </CardFooter>
       )}
     </Card>
-  );
-}
-
-// Separator Component to be used inside the component
-function Separator({ className }: { className?: string }) {
-  return (
-    <div
-      className={`shrink-0 bg-border h-[1px] w-full ${className}`}
-      role="separator"
-    />
   );
 }
