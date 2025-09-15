@@ -3,7 +3,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Loader2, Camera, Upload, X, Wand2 } from "lucide-react";
@@ -126,8 +126,7 @@ export function VisualIdentifier() {
   }
 
   return (
-    <Card>
-      <CardContent className="p-6 space-y-4">
+    <div className="space-y-4">
         {isCameraOpen ? (
           <div className="space-y-4">
             <div className="relative w-full aspect-video rounded-md overflow-hidden border">
@@ -195,7 +194,6 @@ export function VisualIdentifier() {
             </CardContent>
           </Card>
         )}
-      </CardContent>
-    </Card>
+      </div>
   );
 }
