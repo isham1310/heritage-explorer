@@ -26,8 +26,8 @@ export function WaypointGuide({ waypoints }: WaypointGuideProps) {
             key={index}
             className="border-b-0 mb-4"
           >
-            <Card className="overflow-hidden bg-secondary/30 dark:bg-card">
-              <AccordionTrigger className="p-6 text-lg font-headline hover:no-underline">
+            <Card className="overflow-hidden">
+              <AccordionTrigger className="p-6 text-lg hover:no-underline">
                 <div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-lg">
                     {index + 1}

@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -53,18 +52,15 @@ export function StoryGenerator({ site }: StoryGeneratorProps) {
   };
 
   return (
-    <Card className="bg-secondary/30 dark:bg-card">
+    <Card>
       <CardHeader>
-        <CardTitle className="font-headline">Narrative Controls</CardTitle>
-        <CardDescription>
-          Customize the story's tone and style to your liking.
-        </CardDescription>
+        <CardTitle>Narrative Controls</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="tone-select">Tone</Label>
-            <Select value={tone} onValueChange={setTone}>
+            <Select value={tone} onValueChange={setTone} disabled={isLoading}>
               <SelectTrigger id="tone-select">
                 <SelectValue placeholder="Select a tone" />
               </SelectTrigger>
@@ -78,7 +74,7 @@ export function StoryGenerator({ site }: StoryGeneratorProps) {
           </div>
           <div className="space-y-2">
             <Label htmlFor="style-select">Style</Label>
-            <Select value={style} onValueChange={setStyle}>
+            <Select value={style} onValueChange={setStyle} disabled={isLoading}>
               <SelectTrigger id="style-select">
                 <SelectValue placeholder="Select a style" />
               </SelectTrigger>
@@ -109,16 +105,17 @@ export function StoryGenerator({ site }: StoryGeneratorProps) {
         <CardFooter className="flex-col items-start">
           <Separator className="my-4" />
           {isLoading && (
-            <div className="w-full space-y-2">
+            <div className="w-full space-y-2 p-4">
               <div className="h-4 bg-muted rounded w-3/4 animate-pulse"></div>
               <div className="h-4 bg-muted rounded w-full animate-pulse"></div>
               <div className="h-4 bg-muted rounded w-5/6 animate-pulse"></div>
+               <div className="h-4 bg-muted rounded w-1/2 animate-pulse"></div>
             </div>
           )}
           {narrative && (
             <div className="w-full space-y-4">
               <SpeechControls textToSpeak={narrative} />
-              <ScrollArea className="h-60 w-full rounded-md border p-4 bg-background">
+              <ScrollArea className="h-60 w-full rounded-md border p-4">
                 <p className="whitespace-pre-wrap leading-relaxed">
                   {narrative}
                 </p>

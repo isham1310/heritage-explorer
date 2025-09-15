@@ -34,11 +34,11 @@ export function FeedbackForm() {
   };
 
   return (
-    <Card className="bg-secondary/30 dark:bg-card">
+    <Card>
       <CardContent className="p-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <p className="text-sm font-medium text-center">Your Rating</p>
+            <p className="text-sm font-medium text-center text-muted-foreground">Your Rating</p>
             <div
               className="flex justify-center gap-1"
               onMouseLeave={() => setHoverRating(0)}
@@ -49,15 +49,15 @@ export function FeedbackForm() {
                   type="button"
                   onClick={() => setRating(star)}
                   onMouseEnter={() => setHoverRating(star)}
-                  className="p-1"
+                  className="p-1 cursor-pointer"
                   aria-label={`Rate ${star} stars`}
                 >
                   <Star
                     className={cn(
                       "h-8 w-8 transition-colors",
                       star <= (hoverRating || rating)
-                        ? "text-accent fill-accent"
-                        : "text-muted-foreground"
+                        ? "text-yellow-400 fill-yellow-400"
+                        : "text-muted-foreground/50"
                     )}
                   />
                 </button>
@@ -68,6 +68,7 @@ export function FeedbackForm() {
             placeholder="Tell us about your experience..."
             value={review}
             onChange={(e) => setReview(e.target.value)}
+            rows={4}
           />
           <Button type="submit" className="w-full">
             Submit Feedback

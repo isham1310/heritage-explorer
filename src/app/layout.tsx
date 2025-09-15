@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { SiteHeader } from "@/components/site-header";
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Heritage Narrator",
@@ -16,21 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-body antialiased min-h-screen flex flex-col">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <div className="relative flex min-h-screen flex-col">
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+        </div>
         <Toaster />
       </body>
     </html>

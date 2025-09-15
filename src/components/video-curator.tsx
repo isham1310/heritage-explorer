@@ -34,6 +34,7 @@ export function VideoCurator({ site }: VideoCuratorProps) {
 
   useEffect(() => {
     const fetchVideos = async () => {
+      setIsLoading(true);
       const result = await handleCurateVideos({
         siteName: site.name,
         siteDescription: site.description,
@@ -58,7 +59,7 @@ export function VideoCurator({ site }: VideoCuratorProps) {
 
   if (videoLinks.length === 0) {
     return (
-      <Card className="bg-secondary/30 dark:bg-card">
+      <Card>
         <CardContent className="p-6">
           <p className="text-muted-foreground">No relevant videos found.</p>
         </CardContent>

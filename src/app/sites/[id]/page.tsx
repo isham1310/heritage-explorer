@@ -43,13 +43,11 @@ export default function SitePage({ params }: { params: { id: string } }) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 container mx-auto">
-          <Badge className="mb-2 bg-primary text-primary-foreground">
-            {site.culture}
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-foreground drop-shadow-lg">
+          <Badge className="mb-2">{site.culture}</Badge>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-foreground drop-shadow-lg">
             {site.name}
           </h1>
-          <p className="mt-2 text-lg text-muted-foreground drop-shadow-md">
+          <p className="mt-2 text-lg text-muted-foreground drop-shadow-md max-w-2xl">
             {site.location}
           </p>
         </div>
@@ -68,7 +66,7 @@ export default function SitePage({ params }: { params: { id: string } }) {
                 </div>
                 <h2
                   id="story-title"
-                  className="text-3xl font-headline font-bold"
+                  className="text-3xl font-bold"
                 >
                   The Story Unfolds
                 </h2>
@@ -91,7 +89,7 @@ export default function SitePage({ params }: { params: { id: string } }) {
                 </div>
                 <h2
                   id="guide-title"
-                  className="text-3xl font-headline font-bold"
+                  className="text-3xl font-bold"
                 >
                   Sequential Guide
                 </h2>
@@ -114,7 +112,7 @@ export default function SitePage({ params }: { params: { id: string } }) {
                 </div>
                 <h2
                   id="videos-title"
-                  className="text-2xl font-headline font-bold"
+                  className="text-2xl font-bold"
                 >
                   Visual Journey
                 </h2>
@@ -132,7 +130,7 @@ export default function SitePage({ params }: { params: { id: string } }) {
                 </div>
                 <h2
                   id="feedback-title"
-                  className="text-2xl font-headline font-bold"
+                  className="text-2xl font-bold"
                 >
                   Share Your Experience
                 </h2>

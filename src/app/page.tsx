@@ -5,10 +5,12 @@ import { SiteCard } from "@/components/site-card";
 import { heritageSites } from "@/lib/sites-data";
 import { Input } from "@/components/ui/input";
 import type { HeritageSite } from "@/types";
+import { Search } from "lucide-react";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredSites, setFilteredSites] = useState<HeritageSite[]>(heritageSites);
+  const [filteredSites, setFilteredSites] =
+    useState<HeritageSite[]>(heritageSites);
 
   useEffect(() => {
     const results = heritageSites.filter((site) =>
@@ -20,7 +22,7 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold mb-2">
+        <h1 className="text-4xl md:text-5xl font-bold mb-2">
           Explore Maharashtra's Heritage
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -29,13 +31,14 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="max-w-md mx-auto mb-12">
+      <div className="relative max-w-md mx-auto mb-12">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         <Input
           type="text"
           placeholder="Search for a heritage site..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full text-lg p-6"
+          className="w-full text-lg p-6 pl-12 rounded-full"
         />
       </div>
 

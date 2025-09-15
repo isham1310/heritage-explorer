@@ -7,10 +7,10 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { MapPin } from "lucide-react";
-import { Badge } from "./ui/badge";
 
 interface SiteCardProps {
   site: HeritageSite;
@@ -20,10 +20,10 @@ export function SiteCard({ site }: SiteCardProps) {
   const image = PlaceHolderImages.find((img) => img.id === site.heroImageId);
 
   return (
-    <Link href={`/sites/${site.id}`} className="group">
-      <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-accent/50 hover:-translate-y-1 bg-secondary/30 dark:bg-card">
+    <Link href={`/sites/${site.id}`} className="group block">
+      <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-primary/50 hover:-translate-y-2 flex flex-col">
         <CardHeader className="p-0">
-          <div className="relative h-48 w-full">
+          <div className="relative h-56 w-full">
             {image && (
               <Image
                 src={image.imageUrl}
@@ -33,19 +33,21 @@ export function SiteCard({ site }: SiteCardProps) {
                 data-ai-hint={image.imageHint}
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-4 left-4">
-              <Badge variant="default" className="bg-accent text-accent-foreground">{site.culture}</Badge>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           </div>
         </CardHeader>
-        <CardContent className="p-6">
-          <CardTitle className="font-headline text-2xl mb-2">{site.name}</CardTitle>
-          <CardDescription className="flex items-center gap-2 text-muted-foreground">
-            <MapPin className="h-4 w-4" />
-            <span>{site.location}</span>
+        <CardContent className="p-6 flex-grow">
+          <CardTitle className="text-2xl mb-2">{site.name}</CardTitle>
+          <CardDescription className="line-clamp-3">
+            {site.description}
           </CardDescription>
         </CardContent>
+        <CardFooter className="p-6 pt-0">
+          <div className="flex items-center gap-2 text-muted-foreground text-sm">
+            <MapPin className="h-4 w-4" />
+            <span>{site.location}</span>
+          </div>
+        </CardFooter>
       </Card>
     </Link>
   );
