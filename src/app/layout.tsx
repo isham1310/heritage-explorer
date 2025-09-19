@@ -11,9 +11,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Jharkhand Tourism Explorer",
+  title: "Heritage Narrator",
   description:
-    "An immersive storytelling experience for Jharkhand's cultural and heritage sites.",
+    "An immersive storytelling experience for cultural and heritage sites.",
 };
 
 export default function RootLayout({

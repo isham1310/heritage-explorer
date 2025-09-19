@@ -35,10 +35,10 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
-          Explore Jharkhand's Heritage
+          Welcome to Heritage Narrator
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Discover the rich history and culture of Jharkhand's iconic landmarks. What would you like to explore today?
+          Discover the rich history and culture of iconic landmarks. What would you like to explore today?
         </p>
       </div>
 
