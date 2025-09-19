@@ -27,7 +27,7 @@ export const heritageSites: HeritageSite[] = [
     notableFigures: ["Medini Ray", "Pratap Ray", "Daud Khan"],
     youtubeVideoLinks: {
       vlog: "https://youtu.be/eL55EIocGTs?si=AnHgzeeQAfdgV6hd",
-      guide: "https://www.youtube.com/watch?v=s5c-y5bXoXU",
+      guide: "https://youtu.be/IsnSlfiOa7Y?si=IlEpNhJkqI2eWPDY",
     },
     waypoints: [
       {
