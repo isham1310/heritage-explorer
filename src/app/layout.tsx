@@ -11,7 +11,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Heritage Narrator",
+  title: "Heritage Explorer",
   description:
     "An immersive storytelling experience for cultural and heritage sites.",
 };
