@@ -105,6 +105,12 @@ const nextConfig: NextConfig = {
         hostname: 'assets.telegraphindia.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.herzindagi.info',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
