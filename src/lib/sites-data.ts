@@ -69,7 +69,7 @@ export const heritageSites: HeritageSite[] = [
         specialty: "Fresh local produce and traditional snacks"
       }
     ],
-    bookingLink: "",
+    bookingLink: "https://isham1310.github.io/nethrat-hill-station-/",
   },
   {
     id: "netarhat",
@@ -138,6 +138,6 @@ export const heritageSites: HeritageSite[] = [
         specialty: "Fresh pears and local fruits (seasonal)."
       }
     ],
-    bookingLink: ""
+    bookingLink: "https://isham1310.github.io/nethrat-hill-station-/"
   }
 ];
