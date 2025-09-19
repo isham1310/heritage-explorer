@@ -111,6 +111,12 @@ const nextConfig: NextConfig = {
         hostname: 'images.herzindagi.info',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
