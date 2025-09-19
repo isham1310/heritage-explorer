@@ -89,7 +89,7 @@ export const heritageSites: HeritageSite[] = [
     notableEvents: ["Establishment as a hill station by the British.", "The tragic story of Magnolia at the sunset point."],
     notableFigures: ["Magnolia"],
     youtubeVideoLinks: {
-      vlog: "https://www.youtube.com/watch?v=1pA9tGv48vU",
+      vlog: "https://youtu.be/NwrqCPpYFio",
       guide: "https://www.youtube.com/watch?v=N6CKg2Yp8JA",
     },
     waypoints: [
