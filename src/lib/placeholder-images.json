@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -23,6 +24,36 @@
       "description": "The intricately designed Nagpuri Gate of the new fort.",
       "imageUrl": "https://picsum.photos/seed/palamu-gate/600/400",
       "imageHint": "fort gate"
+    },
+    {
+      "id": "netarhat-hero",
+      "description": "A breathtaking sunrise over the hills of Netarhat.",
+      "imageUrl": "https://picsum.photos/seed/netarhat-hero/1200/600",
+      "imageHint": "sunrise hills"
+    },
+    {
+      "id": "netarhat-sunrise",
+      "description": "Tourists gathering at the Netarhat sunrise point.",
+      "imageUrl": "https://picsum.photos/seed/netarhat-sunrise/600/400",
+      "imageHint": "sunrise viewpoint"
+    },
+    {
+      "id": "netarhat-magnolia-point",
+      "description": "A beautiful sunset at Magnolia View Point.",
+      "imageUrl": "https://picsum.photos/seed/netarhat-sunset/600/400",
+      "imageHint": "sunset point"
+    },
+    {
+      "id": "netarhat-lower-ghaghri",
+      "description": "The cascading waters of Lower Ghaghri Waterfalls.",
+      "imageUrl": "https://picsum.photos/seed/netarhat-lower-ghaghri/600/400",
+      "imageHint": "waterfall jungle"
+    },
+    {
+      "id": "netarhat-lodh-falls",
+      "description": "The majestic Lodh Waterfalls, the highest in Jharkhand.",
+      "imageUrl": "https://picsum.photos/seed/netarhat-lodh-falls/600/400",
+      "imageHint": "tall waterfall"
     }
   ]
 }
