@@ -69,6 +69,6 @@ export const heritageSites: HeritageSite[] = [
         specialty: "Fresh local produce and traditional snacks"
       }
     ],
-    bookingLink: "https://isham1310.github.io/nethrat-hill-station-/",
+    bookingLink: "",
   },
 ];
