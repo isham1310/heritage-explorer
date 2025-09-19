@@ -10,7 +10,7 @@ export function SiteHeader() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Landmark className="h-6 w-6 text-primary" />
             <span className="font-bold sm:inline-block">
-              Heritage Narrator
+              Jharkhand Tourism Explorer
             </span>
           </Link>
         </div>

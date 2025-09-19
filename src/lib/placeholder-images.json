@@ -1,35 +1,28 @@
-
 {
   "placeholderImages": [
     {
-      "id": "harishchandragad-hero",
-      "description": "A panoramic view of Harishchandragad.",
-      "imageUrl": "https://www.nativeplanet.com/img/2023/06/harishchandragad1-1686645298.jpg",
-      "imageHint": "mountain fort"
+      "id": "palamu-fort-hero",
+      "description": "A panoramic view of the Palamu Fort ruins.",
+      "imageUrl": "https://picsum.photos/seed/palamu-hero/1200/600",
+      "imageHint": "fort ruins"
     },
     {
-      "id": "harishchandragad-waypoint-1",
-      "description": "Kedareshwar Cave with its Shiva Linga surrounded by water.",
-      "imageUrl": "https://www.mumbaipuneadventures.com/wp-content/uploads/2022/06/mumbai-pune-adventures-harishchandragad-trek-5.jpg",
-      "imageHint": "cave temple"
+      "id": "palamu-fort-old",
+      "description": "The weathered walls of the Old Palamu Fort.",
+      "imageUrl": "https://picsum.photos/seed/palamu-old/600/400",
+      "imageHint": "old fort"
     },
     {
-      "id": "harishchandragad-waypoint-2",
-      "description": "The breathtaking view from Kokan Kada cliff.",
-      "imageUrl": "https://i.ytimg.com/vi/io6KRYyA02M/maxresdefault.jpg",
-      "imageHint": "cliff view"
+      "id": "palamu-fort-new",
+      "description": "The imposing structure of the New Palamu Fort on a hill.",
+      "imageUrl": "https://picsum.photos/seed/palamu-new/600/400",
+      "imageHint": "hill fort"
     },
     {
-      "id": "harishchandragad-waypoint-3",
-      "description": "View from the Taramati Peak, the highest point of the fort.",
-      "imageUrl": "https://tripxl.com/blog/wp-content/uploads/2025/01/Konkan-Kada-Konkan-Cliff.jpg",
-      "imageHint": "mountain peak"
-    },
-    {
-      "id": "harishchandragad-waypoint-4",
-      "description": "The ancient Temple of Harishchandreshwar.",
-      "imageUrl": "https://1.bp.blogspot.com/-VHPCaq4RLYM/Xyfpd2cQPJI/AAAAAAAADVg/DJCFJNMLzHEN3CU9NOfd83WJCpOw64kTACLcBGAsYHQ/w1200-h630-p-k-no-nu/DSCN9584-compressed.jpg",
-      "imageHint": "ancient temple"
+      "id": "palamu-fort-gate",
+      "description": "The intricately designed Nagpuri Gate of the new fort.",
+      "imageUrl": "https://picsum.photos/seed/palamu-gate/600/400",
+      "imageHint": "fort gate"
     }
   ]
 }

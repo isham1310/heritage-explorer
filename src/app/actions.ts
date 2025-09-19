@@ -6,11 +6,6 @@ import {
   GenerateSiteNarrativeOutput,
 } from "@/ai/flows/generate-site-narrative";
 import {
-  curateRelevantYouTubeVideos,
-  CurateRelevantYouTubeVideosInput,
-  CurateRelevantYouTubeVideosOutput,
-} from "@/ai/flows/curate-relevant-youtube-videos";
-import {
   identifyHeritageSiteFromImage,
   IdentifyHeritageSiteFromImageInput,
   IdentifyHeritageSiteFromImageOutput,
@@ -31,19 +26,6 @@ export async function handleGenerateNarrative(
   }
 }
 
-export async function handleCurateVideos(
-  input: CurateRelevantYouTubeVideosInput
-): Promise<CurateRelevantYouTubeVideosOutput> {
-  try {
-    const result = await curateRelevantYouTubeVideos(input);
-    return result;
-  } catch (error) {
-    console.error("Error curating videos:", error);
-    return {
-      curatedVideoLinks: [],
-    };
-  }
-}
 
 export async function handleIdentifySite(
   input: IdentifyHeritageSiteFromImageInput

@@ -37,7 +37,7 @@ const prompt = ai.definePrompt({
   name: 'identifyHeritageSiteFromImagePrompt',
   input: {schema: IdentifyHeritageSiteFromImageInputSchema},
   output: {schema: IdentifyHeritageSiteFromImageOutputSchema},
-  prompt: `You are an expert in identifying Maharashtrian heritage sites.
+  prompt: `You are an expert in identifying Jharkhand's heritage sites.
   A user has provided an image. Your task is to identify which of the following sites is in the image.
 
   Available Sites:

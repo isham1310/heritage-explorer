@@ -1,10 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import type { HeritageSite } from "@/types";
-import { handleCurateVideos } from "@/app/actions";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 interface VideoCuratorProps {
   site: HeritageSite;
@@ -28,36 +25,33 @@ const getYouTubeVideoId = (url: string) => {
   return null;
 };
 
-export function VideoCurator({ site }: VideoCuratorProps) {
-  const [videoLinks, setVideoLinks] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+const VideoEmbed = ({ videoLink, title }: { videoLink: string | null; title: string }) => {
+    if (!videoLink) return null;
+    const videoId = getYouTubeVideoId(videoLink);
+    if (!videoId) return null;
 
-  useEffect(() => {
-    const fetchVideos = async () => {
-      setIsLoading(true);
-      const result = await handleCurateVideos({
-        siteName: site.name,
-        siteDescription: site.description,
-        youtubeVideoLinks: site.youtubeVideoLinks,
-      });
-      setVideoLinks(result.curatedVideoLinks);
-      setIsLoading(false);
-    };
-
-    fetchVideos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [site.id]);
-
-  if (isLoading) {
     return (
-      <div className="space-y-4">
-        <Skeleton className="h-44 w-full rounded-lg" />
-        <Skeleton className="h-44 w-full rounded-lg" />
-      </div>
+        <div className="space-y-2">
+            <h3 className="font-semibold">{title}</h3>
+            <div className="aspect-video w-full">
+                <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={`YouTube video player - ${title}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-lg border"
+                ></iframe>
+            </div>
+        </div>
     );
-  }
+}
 
-  if (videoLinks.length === 0) {
+export function VideoCurator({ site }: VideoCuratorProps) {
+  const { vlog, guide } = site.youtubeVideoLinks;
+
+  if (!vlog && !guide) {
     return (
       <Card>
         <CardContent className="p-6">
@@ -68,25 +62,9 @@ export function VideoCurator({ site }: VideoCuratorProps) {
   }
 
   return (
-    <div className="space-y-4">
-      {videoLinks.map((link) => {
-        const videoId = getYouTubeVideoId(link);
-        if (!videoId) return null;
-
-        return (
-          <div key={videoId} className="aspect-video w-full">
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg border"
-            ></iframe>
-          </div>
-        );
-      })}
+    <div className="space-y-6">
+        <VideoEmbed videoLink={vlog} title="Travel Vlog" />
+        <VideoEmbed videoLink={guide} title="Complete Guide" />
     </div>
   );
 }

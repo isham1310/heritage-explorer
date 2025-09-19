@@ -35,11 +35,10 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
-          Explore Maharashtra's Heritage
+          Explore Jharkhand's Heritage
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          I can tell you the stories of Maharashtra's most famous heritage
-          sites. What would you like to explore today?
+          Discover the rich history and culture of Jharkhand's iconic landmarks. What would you like to explore today?
         </p>
       </div>
 
@@ -51,6 +50,7 @@ export default function Home() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full text-lg p-6 pl-12 pr-20 rounded-full"
+          suppressHydrationWarning
         />
         <Dialog>
           <DialogTrigger asChild>
@@ -93,12 +93,11 @@ export default function Home() {
           </div>
         )
       ) : (
-        <div className="text-center py-16">
-          <p className="text-xl text-muted-foreground">
-            Start by typing a name above to find a heritage site, or use the
-            camera to identify one from a photo.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {heritageSites.map((site) => (
+              <SiteCard key={site.id} site={site} />
+            ))}
+          </div>
       )}
     </div>
   );

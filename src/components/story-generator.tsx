@@ -43,7 +43,7 @@ export function StoryGenerator({ site }: StoryGeneratorProps) {
       architecturalSignificance: site.architecturalSignificance,
       notableEvents: site.notableEvents.join(", "),
       notableFigures: site.notableFigures.join(", "),
-      culture: site.culture,
+      culture: site.culture.name,
       tone,
       style,
     });

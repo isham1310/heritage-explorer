@@ -9,8 +9,9 @@ import { WaypointGuide } from "@/components/waypoint-guide";
 import { VideoCurator } from "@/components/video-curator";
 import { FeedbackForm } from "@/components/feedback-form";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Camera, Film, Users, Ticket } from "lucide-react";
+import { BookOpen, Camera, Film, Users, Ticket, MapPin, Building, ShoppingBasket, Hand, Utensils } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export async function generateStaticParams() {
   return heritageSites.map((site) => ({
@@ -45,7 +46,7 @@ export default function SitePage({ params }: { params: { id: string } }) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 container mx-auto">
-          <Badge className="mb-2">{site.culture}</Badge>
+          <Badge className="mb-2">{site.culture.name}</Badge>
           <h1 className="text-4xl md:text-6xl font-extrabold text-foreground drop-shadow-lg">
             {site.name}
           </h1>
@@ -57,11 +58,10 @@ export default function SitePage({ params }: { params: { id: string } }) {
 
       {/* Main Content */}
       <div className="container mx-auto py-12 px-4">
-        {site.id === "harishchandragad-fort" && (
-          <div className="mb-8 text-center">
-            <Button asChild size="lg">
+        <div className="mb-8 text-center">
+            <Button asChild size="lg" disabled={!site.bookingLink}>
               <Link
-                href="http://isham1310.github.io/harischandragadtrek/"
+                href={site.bookingLink || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,10 +71,33 @@ export default function SitePage({ params }: { params: { id: string } }) {
             </Button>
             <Separator className="mt-8"/>
           </div>
-        )}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left/Main Column */}
           <div className="lg:col-span-2 space-y-12">
+            
+            {/* History Section */}
+            <section aria-labelledby="history-title">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <BookOpen className="h-6 w-6 text-primary" />
+                </div>
+                <h2
+                  id="history-title"
+                  className="text-3xl font-bold"
+                >
+                  History
+                </h2>
+              </div>
+               <div className="space-y-6 text-muted-foreground max-w-prose">
+                  <p>{site.historicalContext}</p>
+                  <p><strong className="text-foreground">Builder:</strong> {site.builder}</p>
+                  <p><strong className="text-foreground">Famous Ruler:</strong> {site.famousRuler}</p>
+                  <p><strong className="text-foreground">Major Battles:</strong> {site.majorBattles.join(', ')}</p>
+               </div>
+            </section>
+
+            <Separator />
+            
             {/* AI Storyteller */}
             <section aria-labelledby="story-title">
               <div className="flex items-center gap-4 mb-6">
@@ -121,6 +144,69 @@ export default function SitePage({ params }: { params: { id: string } }) {
 
           {/* Right/Sidebar Column */}
           <aside className="space-y-12">
+
+            {/* Local Culture */}
+             <section aria-labelledby="culture-title">
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                        <Hand className="h-6 w-6 text-primary" />
+                    </div>
+                    <h2 id="culture-title" className="text-2xl font-bold">Local Culture</h2>
+                </div>
+                <Card>
+                    <CardContent className="p-6 space-y-4">
+                        <h3 className="font-semibold text-lg">{site.culture.name}</h3>
+                        <p className="text-muted-foreground text-sm">{site.culture.description}</p>
+                    </CardContent>
+                </Card>
+            </section>
+
+            <Separator />
+
+             {/* Accommodation */}
+            <section aria-labelledby="hotels-title">
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                        <Building className="h-6 w-6 text-primary" />
+                    </div>
+                    <h2 id="hotels-title" className="text-2xl font-bold">Nearby Accommodation</h2>
+                </div>
+                <div className="space-y-4">
+                    {site.hotels.map((hotel, index) => (
+                        <Card key={index}>
+                            <CardContent className="p-4">
+                                <h3 className="font-semibold">{hotel.name}</h3>
+                                <p className="text-sm text-muted-foreground">{hotel.distance}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </section>
+
+            <Separator />
+            
+            {/* Local Vendors */}
+            <section aria-labelledby="vendors-title">
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                        <ShoppingBasket className="h-6 w-6 text-primary" />
+                    </div>
+                    <h2 id="vendors-title" className="text-2xl font-bold">Local Vendors</h2>
+                </div>
+                <div className="space-y-4">
+                     {site.localVendors.map((vendor, index) => (
+                        <Card key={index}>
+                            <CardContent className="p-4">
+                                <h3 className="font-semibold">{vendor.name}</h3>
+                                <p className="text-sm text-muted-foreground">{vendor.specialty}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </section>
+            
+            <Separator />
+            
             {/* Curated Videos */}
             <section aria-labelledby="videos-title">
               <div className="flex items-center gap-4 mb-6">

@@ -2,49 +2,73 @@ import type { HeritageSite } from "@/types";
 
 export const heritageSites: HeritageSite[] = [
   {
-    id: "harishchandragad-fort",
-    name: "Harishchandragad Fort",
-    location: "Ahmednagar District, Maharashtra, India",
-    culture: "Maratha",
-    heroImageId: "harishchandragad-hero",
+    id: "palamu-fort",
+    name: "Palamu Fort",
+    location: "Palamu, Jharkhand, India",
+    culture: {
+      name: "Chero Dynasty",
+      description: "The local culture is deeply influenced by the Chero and tribal traditions. Folk songs and dances often narrate the tales of the kings and the fort. Local cuisine includes dishes like Dhuska, Litti Chokha, and various preparations of rice."
+    },
+    heroImageId: "palamu-fort-hero",
     description:
-      "Harishchandragad is a hill fort in the Ahmednagar district of India. Its history is linked with that of Malshej Ghat, Kothale village and it has played a role in guarding and controlling the surrounding region.",
+      "The Palamu Forts are two ruined forts located deep in the forests of Palamu, Jharkhand. The old fort was built by the Chero king, Medini Ray, and the new fort was constructed by his son, Pratap Ray.",
     historicalContext:
-      "The fort is quite ancient. Remnants of Microlithic man have been discovered here. The various Puranas (ancient scriptures) like Matsyapurana, Agnipurana and Skandapurana include many references about Harishchandragad. Its origin is said to have been in the 6th century, during the rule of Kalachuri dynasty. The citadel was built during this era. The various caves probably have been carved out in the 11th century. In these caves are idols of Lord Vishnu. Though the cliffs are named Taramati and Rohidas, they are not related to Ayodhya. Great sage Changdev (one who created the epic Tatvasaar), used to meditate here in the 14th century. The caves are from the same period. The various constructions on the fort and those existing the surrounding region point to the existence of diverse cultures here. The carvings on the temples of Nageshwar (in Khireshwar village), in the Harishchandreshwar temple and in the cave of Kedareshwar indicate that the fort belongs to the medieval period, since it is related to mahadeva as a totem of tribes Mahadev Koli. They were controlling the fort before Moguls. Later the fort was under the control of Moguls. The Marathas captured it in 1747.",
+      "The history of the Palamu Forts is deeply connected to the Chero dynasty. The old fort, a formidable structure, was built by King Medini Ray, the most famous ruler of the Chero dynasty, who ruled for 13 years from 1662 to 1674. His rule extended to areas in south Gaya and Hazaribagh. The new fort was built by his son, Pratap Ray. The Cheros were defeated by the Mughals, and later the forts came under the control of the British.",
     architecturalSignificance:
-      "The fort features diverse cultural constructions. The carvings on the temples of Nageshwar, Harishchandreshwar, and the Kedareshwar cave indicate medieval architectural styles. The Temple of Harishchandreshwar is a marvelous example of ancient Indian stone carving art. This temple is about 16m high from its base. Around this temple there a few caves & ancient water tanks. The river Mangal Ganga is said to originate from one of the tanks located close to the temple. The top of the temple resembles construction with the north-Indian temples. A similar temple is situated in Buddha-Gaya. On the main entrance there are sculptures of faces. These are faces of guards of the temple. On the left side of the entrance is a Devnagri inscription, which is about saint Changdev.",
+      "The forts are an example of Indo-Islamic architecture. The new fort is built on a hill and is larger, with several gates and defensive walls. The Nagpuri gate is a key feature, noted for its intricate carvings. The forts were built using local materials like stone and lime mortar.",
+    builder: "Medini Ray (Old Fort), Pratap Ray (New Fort)",
+    famousRuler: "Medini Ray",
+    majorBattles: ["Battle against the Mughals led by Daud Khan in 1660"],
     notableEvents: [
-      "Origin in the 6th century under the Kalachuri dynasty.",
-      "Meditation place for the great sage Changdev in the 14th century.",
-      "Captured by the Marathas in 1747.",
+      "Construction of the old fort by Medini Ray.",
+      "Construction of the new fort by Pratap Ray.",
+      "Mughal invasion and capture of the forts.",
     ],
-    notableFigures: ["Changdev"],
-    youtubeVideoLinks: ["https://youtu.be/u2DLbEqHyJw?si=nOPL8Xo0dDzWElwk"],
+    notableFigures: ["Medini Ray", "Pratap Ray", "Daud Khan"],
+    youtubeVideoLinks: {
+      vlog: "https://www.youtube.com/watch?v=Fk_n9m2zt0A",
+      guide: "https://www.youtube.com/watch?v=s5c-y5bXoXU",
+    },
     waypoints: [
       {
-        title: "Kedareshwar Cave",
+        title: "Old Palamu Fort",
         description:
-          "Towards the right of Harishchandreshwar temple, there is the huge cave of Kedareshwar, in which there is a big Shiva Linga, which is completely surrounded by water. Its height from the base is 5 feet (1.5 meters), and the water is waist-deep. It is quite difficult to reach the Shiva Linga because the water is ice-cold. There are sculptures carved out in the cave. In the monsoon it is not possible to reach this cave, as a huge stream flows across the way. As can be seen from the picture, there is a huge rock above the Shiva Linga. There were four pillars built around the Shiva Linga to support the cave. Another interesting thing about this place is that water seeps into this temple from the four walls on an daily basis. And owing to the water being very cold, it's difficult to reach inside too. The water continues to seep in during all the seasons during the year. During rainy season the water level in this cave becomes almost waist high.",
-        imageId: "harishchandragad-waypoint-1",
+          "Built by Medini Ray, this fort stands on a lower plain and has a more weathered appearance. It houses the remains of barracks and administrative buildings.",
+        imageId: "palamu-fort-old",
       },
       {
-        title: "Kokan Kada (Konkan Cliff)",
+        title: "New Palamu Fort",
         description:
-          "This cliff faces west and looks down upon the Konkan. It provides views of the surrounding region. The cliff has an overhang, but has been climbed many times. Sometimes a circular rainbow (the Brocken spectre phenomenon) can be seen from this point. It can be seen only when there is a bit of mist in the valley, and the sun is right behind the person facing the valley. One phenomenon that can be observed at this place is the vertical cloud burst, in which the clouds nearing the cliff get sucked into the pit fall area below and are thrown vertically into the sky reaching more than 50 feet (15 m), creating the impression of a wall that is rising straight from the edge of the cliff without entering the landmass area.",
-        imageId: "harishchandragad-waypoint-2",
+          "Constructed by Pratap Ray on a higher elevation, this fort offers a strategic advantage and panoramic views of the surrounding forest. Its walls and gates are better preserved.",
+        imageId: "palamu-fort-new",
       },
       {
-        title: "Taramati Peak",
+        title: "Nagpuri Gate",
         description:
-          "Also known as Taramanchi. This is the top most point on the fort (1429 meters). Leopards are seen in the forests beyond this peak. From here we can have a glimpse of the whole range of Naneghat and the forts near Murbad. From this Taramati point, we can have a glimpse of forts till Siddhagad near Bhimashankar in the south and Napta twin peaks, Ghodishep (865 meters), Ajoba (1375 meters), Kulang fort (1471 meters) in the north near the Kasara region.",
-        imageId: "harishchandragad-waypoint-3",
-      },
-      {
-        title: "Temple of Harishchandreshwar",
-        description:
-          "This temple is a marvelous example of the fine art of carving sculptures out of stones that prevailed in ancient India. It is about 16 m high from its base. Around this temple there are a few caves & ancient water tanks. The river Mangal Ganga is said to originate from one of the tanks located close to the temple. The top of the temple resembles construction with the north-Indian temples. A similar temple is situated in Buddha-Gaya. Here we can see many tombs, in which a typical construction is seen. These are built by well-finished arranging stones one on top of the other. There are three main caves near the temple. The cisterns near the temple provide drinking water. A short distance away, another temple called Kashitirtha is located. The fascinating thing about this temple is that it has been carved out from a single huge rock. There are entrances from all four sides. On the main entrance there are sculptures of faces. These are faces of guards of the temple. On the left side of the entrance is a Devnagri inscription, which is about saint Changdev.",
-        imageId: "harishchandragad-waypoint-4",
+          "The main entrance to the new fort, the Nagpuri Gate, is an imposing structure with fine architectural details, reflecting the artistic sensibilities of the Chero rulers.",
+        imageId: "palamu-fort-gate",
       },
     ],
+    hotels: [
+      {
+        name: "Hotel LX International",
+        distance: "Approx. 25 km from the fort"
+      },
+      {
+        name: "Chiyanki Tourist Complex",
+        distance: "Approx. 20 km from the fort"
+      }
+    ],
+    localVendors: [
+      {
+        name: "Local artisans near Betla National Park",
+        specialty: "Bamboo crafts and tribal jewelry"
+      },
+      {
+        name: "Weekly markets (haats)",
+        specialty: "Fresh local produce and traditional snacks"
+      }
+    ],
+    bookingLink: "https://tourism.jharkhand.gov.in/",
   },
 ];
