@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'httpshttps',
         hostname: 'www.mumbaipuneadventures.com',
         port: '',
         pathname: '/**',
@@ -67,6 +67,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'blogger.googleusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse3.mm.bing.net',
         port: '',
         pathname: '/**',
       },
