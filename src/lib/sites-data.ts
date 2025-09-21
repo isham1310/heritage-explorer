@@ -112,6 +112,11 @@ export const heritageSites: HeritageSite[] = [
         title: "Lodh Waterfalls",
         description: "The highest waterfall in Jharkhand, plunging from about 468 feet. It was a favorite winter spot for the British and is located 61 km from Netarhat.",
         imageId: "netarhat-lodh-falls",
+      },
+      {
+        title: "Hundru Falls",
+        description: "A stunning waterfall where the Subarnarekha River falls from a height of 322 feet. A wooden bridge offers a fantastic view of the falls.",
+        imageId: "netarhat-hundru-falls",
       }
     ],
     hotels: [

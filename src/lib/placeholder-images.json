@@ -54,6 +54,12 @@
       "description": "The majestic Lodh Waterfalls, the highest in Jharkhand.",
       "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.s_6QWkdumbaLwE01qBI32AHaEo?rs=1&pid=ImgDetMain&o=7&rm=3",
       "imageHint": "tall waterfall"
+    },
+    {
+      "id": "netarhat-hundru-falls",
+      "description": "A powerful waterfall with a wooden bridge.",
+      "imageUrl": "https://i.ibb.co/3s6Tz0c/netarhat-waterfall.png",
+      "imageHint": "waterfall bridge"
     }
   ]
 }
