@@ -59,7 +59,8 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https'
+        ,
         hostname: 'i.ytimg.com',
         port: '',
         pathname: '/**',
@@ -115,6 +116,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'currentaffairs.adda247.com',
         port: '',
         pathname: '/**',
       }

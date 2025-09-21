@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "home-hero",
-      "description": "A beautiful, lush green valley with rolling hills and a river, representing Jharkhand's natural beauty.",
-      "imageUrl": "https://picsum.photos/seed/homehero/1200/800",
-      "imageHint": "green valley"
+      "description": "A beautiful view of Ranchi, the capital of Jharkhand.",
+      "imageUrl": "https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2023/10/26190154/Capital-of-Jharkhand.png",
+      "imageHint": "cityscape ranchi"
     },
     {
       "id": "palamu-fort-hero",
@@ -63,7 +63,7 @@
     },
     {
       "id": "netarhat-hundru-falls",
-      "description": "A powerful waterfall with a wooden bridge.",
+      "description": "A stunning waterfall where the Subarnarekha River falls from a height of 322 feet. A wooden bridge offers a fantastic view of the falls.",
       "imageUrl": "https://i.ibb.co/3s6Tz0c/netarhat-waterfall.png",
       "imageHint": "waterfall bridge"
     },
