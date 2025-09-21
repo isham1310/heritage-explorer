@@ -38,26 +38,35 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "home-hero");
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <section className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
-        <div className="space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            Uncover Jharkhand's<br />
-            <span className="text-primary">Hidden Gems</span>
+    <>
+      <section className="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            priority
+            className="object-cover"
+            data-ai-hint={heroImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 p-4 space-y-6">
+           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter drop-shadow-md">
+            Uncover Jharkhand's <span className="text-primary">Hidden Gems</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
+          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto drop-shadow-sm">
             Your personal guide to exploring the rich history and culture of
             Jharkhand's iconic landmarks.
           </p>
-
-          <div className="relative w-full max-w-md mx-auto md:mx-0">
+          <div className="relative w-full max-w-xl mx-auto">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
               type="text"
               placeholder="Search for a fort or temple..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full text-lg p-6 pl-12 pr-20 rounded-full shadow-lg"
+              className="w-full text-lg p-6 pl-12 pr-20 rounded-full shadow-lg bg-card text-card-foreground border-transparent focus-visible:ring-primary"
               suppressHydrationWarning
             />
             <Dialog>
@@ -65,7 +74,7 @@ export default function Home() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full text-muted-foreground hover:bg-primary/20 hover:text-primary"
                 >
                   <Camera className="h-5 w-5" />
                   <span className="sr-only">Identify from image</span>
@@ -86,63 +95,56 @@ export default function Home() {
             </Dialog>
           </div>
         </div>
-        {heroImage && (
-            <div className="relative h-64 md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                priority
-                className="object-cover"
-                data-ai-hint={heroImage.imageHint}
-              />
-               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-            </div>
-          )}
       </section>
 
-      {!displaySites && (
-        <div className="text-center">
-          <Button
-            size="lg"
-            onClick={() => setShowRecommendations(true)}
-            className="shadow-lg"
-          >
-            Show Recommendations
-          </Button>
-        </div>
-      )}
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        {!displaySites && (
+          <div className="text-center py-8">
+            <h2 className="text-3xl font-bold mb-4">Our Recommendations</h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Ready to explore? Click the button below to reveal our curated list of must-visit heritage sites across Jharkhand.
+            </p>
+            <Button
+              size="lg"
+              onClick={() => setShowRecommendations(true)}
+              className="shadow-lg transform hover:scale-105 transition-transform"
+            >
+              Show Recommendations
+            </Button>
+          </div>
+        )}
 
-      {displaySites && (
-        <div className="mt-12">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            {searchTerm.trim() !== ""
-              ? "Search Results"
-              : "Recommended Sites"}
-          </h2>
-          {searchTerm.trim() !== "" ? (
-            filteredSites.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredSites.map((site) => (
+        {displaySites && (
+          <div className="mt-8">
+            <h2 className="text-3xl font-bold text-center mb-10">
+              {searchTerm.trim() !== ""
+                ? `Results for "${searchTerm}"`
+                : "Recommended Sites"}
+            </h2>
+            {searchTerm.trim() !== "" ? (
+              filteredSites.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredSites.map((site) => (
+                    <SiteCard key={site.id} site={site} />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-16">
+                  <p className="text-xl text-muted-foreground">
+                    I couldn't find any sites matching your search. Try another name.
+                  </p>
+                </div>
+              )
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in-50 duration-500">
+                {heritageSites.map((site) => (
                   <SiteCard key={site.id} site={site} />
                 ))}
               </div>
-            ) : (
-              <div className="text-center py-16">
-                <p className="text-xl text-muted-foreground">
-                  I couldn't find any sites matching your search. Try another name.
-                </p>
-              </div>
-            )
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {heritageSites.map((site) => (
-                <SiteCard key={site.id} site={site} />
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+            )}
+          </div>
+        )}
+      </div>
+    </>
   );
 }
