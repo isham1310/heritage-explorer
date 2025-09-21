@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredSites, setFilteredSites] = useState<HeritageSite[]>([]);
+  const [showRecommendations, setShowRecommendations] = useState(false);
 
   useEffect(() => {
     if (searchTerm.trim() !== "") {
@@ -31,6 +32,8 @@ export default function Home() {
     }
   }, [searchTerm]);
 
+  const displaySites = searchTerm.trim() !== "" || showRecommendations;
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
@@ -42,62 +45,74 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="relative max-w-lg mx-auto mb-12">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-        <Input
-          type="text"
-          placeholder="Search for a fort or temple..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full text-lg p-6 pl-12 pr-20 rounded-full"
-          suppressHydrationWarning
-        />
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full"
-            >
-              <Camera className="h-5 w-5" />
-              <span className="sr-only">Identify from image</span>
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Visual Identifier</DialogTitle>
-            </DialogHeader>
-            <div className="pt-4">
-              <p className="text-muted-foreground mb-4 text-sm">
-                Have a photo of a landmark? Upload it or use your camera to let
-                our AI identify it for you.
-              </p>
-              <VisualIdentifier />
-            </div>
-          </DialogContent>
-        </Dialog>
+      <div className="flex flex-col items-center gap-8">
+        <div className="relative w-full max-w-lg">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <Input
+            type="text"
+            placeholder="Search for a fort or temple..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full text-lg p-6 pl-12 pr-20 rounded-full"
+            suppressHydrationWarning
+          />
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full"
+              >
+                <Camera className="h-5 w-5" />
+                <span className="sr-only">Identify from image</span>
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Visual Identifier</DialogTitle>
+              </DialogHeader>
+              <div className="pt-4">
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Have a photo of a landmark? Upload it or use your camera to let
+                  our AI identify it for you.
+                </p>
+                <VisualIdentifier />
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+
+        {!showRecommendations && searchTerm.trim() === "" && (
+          <Button size="lg" onClick={() => setShowRecommendations(true)}>
+            Show Recommendations
+          </Button>
+        )}
       </div>
 
-      {searchTerm.trim() !== "" ? (
-        filteredSites.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSites.map((site) => (
-              <SiteCard key={site.id} site={site} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <p className="text-xl text-muted-foreground">
-              I couldn't find any sites matching your search. Try another name.
-            </p>
-          </div>
-        )
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {heritageSites.map((site) => (
-              <SiteCard key={site.id} site={site} />
-            ))}
-          </div>
+      {displaySites && (
+        <div className="mt-12">
+          {searchTerm.trim() !== "" ? (
+            filteredSites.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredSites.map((site) => (
+                  <SiteCard key={site.id} site={site} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <p className="text-xl text-muted-foreground">
+                  I couldn't find any sites matching your search. Try another name.
+                </p>
+              </div>
+            )
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {heritageSites.map((site) => (
+                  <SiteCard key={site.id} site={site} />
+                ))}
+              </div>
+          )}
+        </div>
       )}
     </div>
   );
