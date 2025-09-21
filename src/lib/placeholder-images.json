@@ -2,6 +2,12 @@
 {
   "placeholderImages": [
     {
+      "id": "home-hero",
+      "description": "A beautiful, lush green valley with rolling hills and a river, representing Jharkhand's natural beauty.",
+      "imageUrl": "https://picsum.photos/seed/homehero/1200/800",
+      "imageHint": "green valley"
+    },
+    {
       "id": "palamu-fort-hero",
       "description": "A panoramic view of the Palamu Fort ruins.",
       "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.pvdT1cCYUoMmOo6DBCY4mAHaEC?rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -60,6 +66,12 @@
       "description": "A powerful waterfall with a wooden bridge.",
       "imageUrl": "https://i.ibb.co/3s6Tz0c/netarhat-waterfall.png",
       "imageHint": "waterfall bridge"
+    },
+    {
+      "id": "netarhat-waterfall-2",
+      "description": "A scenic waterfall in Netarhat.",
+      "imageUrl": "https://i.ytimg.com/vi/OEDyq9g2yRk/maxresdefault.jpg",
+      "imageHint": "scenic waterfall"
     }
   ]
 }
