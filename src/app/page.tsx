@@ -1,10 +1,9 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { SiteCard } from "@/components/site-card";
 import { heritageSites } from "@/lib/sites-data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Input } from "@/components/ui/input";
 import type { HeritageSite } from "@/types";
 import { Search, Camera } from "lucide-react";
@@ -35,27 +34,15 @@ export default function Home() {
   }, [searchTerm]);
 
   const displaySites = searchTerm.trim() !== "" || showRecommendations;
-  const heroImage = PlaceHolderImages.find((img) => img.id === "home-hero");
 
   return (
     <>
-      <section className="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            priority
-            className="object-cover"
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 p-4 space-y-6">
-           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter drop-shadow-md">
+      <section className="w-full py-20 md:py-32 flex items-center justify-center text-center">
+        <div className="p-4 space-y-6 container">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
             Uncover Jharkhand's <span className="text-primary">Hidden Gems</span>
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto drop-shadow-sm">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Your personal guide to exploring the rich history and culture of
             Jharkhand's iconic landmarks.
           </p>
