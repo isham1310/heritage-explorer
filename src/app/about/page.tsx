@@ -1,6 +1,7 @@
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Search, Camera, BookOpen, Map } from 'lucide-react';
 
 export default function AboutPage() {
@@ -38,7 +39,7 @@ export default function AboutPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-16">
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tighter">
           How to Use <span className="text-primary">Heritage Explorer</span>
         </h1>
@@ -47,32 +48,35 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="grid gap-12">
+      <div className="grid gap-16">
         {features.map((feature, index) => (
-          <Card key={index} className="overflow-hidden shadow-lg border-transparent bg-card/50">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 items-center`}>
-              <div className={`p-8 md:p-12 space-y-4 ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
-                <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4">
-                    {feature.icon}
-                </div>
-                <h2 className="text-3xl font-bold">{feature.title}</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  {feature.description}
-                </p>
+          <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className={`space-y-4 ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
+              <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4">
+                  {feature.icon}
               </div>
-              {feature.image && (
-                <div className="relative h-64 lg:h-full w-full">
-                  <Image
-                    src={feature.image.imageUrl}
-                    alt={feature.image.description}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={feature.image.imageHint}
-                  />
-                </div>
-              )}
+              <h2 className="text-3xl font-bold">{feature.title}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {feature.description}
+              </p>
             </div>
-          </Card>
+            
+            {feature.image && (
+              <Card className="overflow-hidden shadow-lg border-transparent bg-card/50">
+                <CardContent className="p-0">
+                    <div className="relative h-80 w-full">
+                    <Image
+                        src={feature.image.imageUrl}
+                        alt={feature.image.description}
+                        fill
+                        className="object-contain"
+                        data-ai-hint={feature.image.imageHint}
+                    />
+                    </div>
+                </CardContent>
+              </Card>
+            )}
+          </div>
         ))}
       </div>
     </div>
