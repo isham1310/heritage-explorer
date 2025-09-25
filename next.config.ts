@@ -130,6 +130,12 @@ const nextConfig: NextConfig = {
         hostname: 'static.vecteezy.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'as2.ftcdn.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
