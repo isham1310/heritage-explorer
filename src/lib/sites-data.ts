@@ -105,7 +105,7 @@ export const heritageSites: HeritageSite[] = [
       },
       {
         title: "Lower Ghaghri Waterfalls",
-        description: "A spectacular waterfall cascading from a height of 98 meters, making it the 33rd-highest in India. It's surrounded by dense jungle and requires a short trek to reach.",
+        description: "A spectacular waterfall cascading from a height of 98 meters, making it the 33rd-highest in India. It's surrounded by dense jungle and. It's surrounded by dense jungle and requires a short trek to reach.",
         imageId: "netarhat-lower-ghaghri",
       },
       {
