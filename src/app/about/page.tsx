@@ -69,7 +69,7 @@ export default function AboutPage() {
                         src={feature.image.imageUrl}
                         alt={feature.image.description}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         data-ai-hint={feature.image.imageHint}
                     />
                     </div>
