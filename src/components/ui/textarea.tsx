@@ -11,12 +11,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, React.ComponentProps<'tex
           className
         )}
         ref={ref}
-        value={props.value}
-        onChange={props.onChange}
-        placeholder={props.placeholder}
-        rows={props.rows}
-        disabled={props.disabled}
-        name={props.name}
+        suppressHydrationWarning
+        {...props}
       />
     );
   }
