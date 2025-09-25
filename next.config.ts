@@ -102,7 +102,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'httpshttps',
+        protocol: 'https',
         hostname: 'assets.telegraphindia.com',
         port: '',
         pathname: '/**',
