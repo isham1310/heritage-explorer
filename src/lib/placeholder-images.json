@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -72,6 +71,30 @@
       "description": "A scenic waterfall in Netarhat.",
       "imageUrl": "https://i.ytimg.com/vi/OEDyq9g2yRk/maxresdefault.jpg",
       "imageHint": "scenic waterfall"
+    },
+    {
+      "id": "about-search",
+      "description": "A close-up of the search bar on the application's home page.",
+      "imageUrl": "https://images.unsplash.com/photo-1668791841574-c33f010892b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZWFyY2glMjBiYXJ8ZW58MHx8fHwxNzU4ODQxNzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "search bar"
+    },
+    {
+      "id": "about-identify",
+      "description": "The visual identifier component showing an image ready for analysis.",
+      "imageUrl": "https://images.unsplash.com/photo-1697051270689-186753b6e1a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aW1hZ2UlMjB1cGxvYWR8ZW58MHx8fHwxNzU4ODQxNzAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "image upload"
+    },
+    {
+      "id": "about-story",
+      "description": "The AI Storyteller controls with options for tone and style.",
+      "imageUrl": "https://images.unsplash.com/photo-1730578725454-dc9899fef7e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdG9yeSUyMGNvbnRyb2xzfGVufDB8fHx8MTc1ODg0MTcwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "story controls"
+    },
+    {
+      "id": "about-waypoints",
+      "description": "The sequential waypoint guide showing a list of locations.",
+      "imageUrl": "https://images.unsplash.com/photo-1623607526795-e9c0cd3c273c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXAlMjBndWlkZXxlbnwwfHx8fDE3NTg4NDE3MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map guide"
     }
   ]
 }
