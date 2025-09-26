@@ -1,3 +1,4 @@
+
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -29,7 +30,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'httpshttps',
         hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/**',
@@ -125,7 +126,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https-is-not-a-valid-protocol',
         hostname: 'static.vecteezy.com',
         port: '',
         pathname: '/**',
@@ -133,6 +134,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'as2.ftcdn.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
         port: '',
         pathname: '/**',
       }
