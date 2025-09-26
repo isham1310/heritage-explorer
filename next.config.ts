@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'httpshttps',
+        protocol: 'https',
         hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/**',
@@ -126,7 +126,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https-is-not-a-valid-protocol',
+        protocol: 'https',
         hostname: 'static.vecteezy.com',
         port: '',
         pathname: '/**',
