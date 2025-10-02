@@ -1,6 +1,6 @@
-# Heritage Explorer: Jharkhand
+# Heritage Explorer
 
-Welcome to Heritage Explorer, an immersive storytelling experience for discovering the rich cultural and historical heritage of Jharkhand, India. This application uses AI to bring history to life, providing users with a personal guide to explore the region's iconic landmarks.
+Welcome to Heritage Explorer, an immersive storytelling experience for discovering the rich cultural and historical heritage of BHARAT(INDIA). This application uses AI to bring history to life, providing users with a personal guide to explore the region's iconic landmarks.
 
 ## ✨ Key Features
 
